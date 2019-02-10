@@ -8,13 +8,8 @@ public class Main {
     public static void main(String[] args) {
         Character c = new CharacterBuilder()
                 .setCharisma(10)
-                .setClass(CharacterClass.Barbarian)
-                .setConstitution(10)
-                .setDexterity(10)
-                .setIntelligence(10)
-                .setName("Ciastek")
-                .setStrangth(10)
-                .setWisdom(10)
+                .setClass(CharacterClass.Sorcerer)
+                .setIntelligence(20)
                 .build();
 
         System.out.println(c.getName());

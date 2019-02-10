@@ -175,4 +175,27 @@ public class CalculatorTests {
     public void fibonacci_parametrizedByClass(int a, int expected) {
         assertThat(Calculator.getFibonaciNumber(a)).isEqualTo(expected);
     }
+
+    @Test
+    public void power2AndSum_a5b10_35() {
+        final double expected = 35;
+
+        final double actual = Calculator.power2AndSum(5, 10);
+
+        Assert.assertEquals(expected, actual, 0.001);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void divideBySquare_a100b0_ThrowIllegalArgumentException(){
+        Calculator.divideBySquare(100.0,0.0);
+    }
+
+    @Test
+    public void divideBySquare_a100b10_1(){
+        final double expected = 1;
+
+        final double actual = Calculator.divideBySquare(100,10);
+
+        Assert.assertEquals(expected,actual,0.001);
+    }
 }

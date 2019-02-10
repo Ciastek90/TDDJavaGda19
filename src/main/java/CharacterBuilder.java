@@ -16,7 +16,7 @@ public class CharacterBuilder implements Builder<Character>{
         return this;
     }
 
-    public CharacterBuilder setStrangth(int value){
+    public CharacterBuilder setStrength(int value){
         result.getStats()[0] = createCharacterStat(value, BaseCharacterStatisticType.Strength);
         return this;
     }

@@ -212,4 +212,26 @@ public final class Calculator {
 
         return getFibonaciNumber(n-1) + getFibonaciNumber(n-2);
     }
+
+    /**
+     * @param poweredNumber Liczba podnoszona do potęgi drugiej
+     * @param addedNumberToPower Liczba dodawana do wyniku potęgowania
+     * @return Wynik działania poweredNumber^2 + addedNumberToPower
+     */
+    public static double power2AndSum(double poweredNumber, double addedNumberToPower) {
+        return sum(exponentiation(poweredNumber, 2),addedNumberToPower);
+    }
+
+    /**
+     * @param dividedNumber Liczba która zostanie podzielona przez kwadrat squaredNumber
+     * @param squaredNumber Liczba któa zostanie podniesiona do kwadratu
+     * @return Wynik działania dividedNumber/(squaredNumber)^2
+     */
+    public static double divideBySquare(double dividedNumber, double squaredNumber) {
+        if(squaredNumber == 0){
+            throw new IllegalArgumentException("Nie dziel przez zero");
+        }
+
+        return divide(dividedNumber,exponentiation(squaredNumber,2));
+    }
 }
